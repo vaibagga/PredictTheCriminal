@@ -34,9 +34,9 @@ def ObjectVariableRectification(data1, data2):
                      'TOOLONG',
                      'IIFAMIN3',
                      'TROUBUND'])
-    for x in obj_cols:
-        data1[x] = pd.get_dummies(data1[x])
-        data2[x] = pd.get_dummies(data2[x])
+    for i in obj_cols:
+        data1[i] = pd.get_dummies(data1[x])
+        data2[i] = pd.get_dummies(data2[x])
     return data1, data2
 
     
@@ -61,7 +61,7 @@ def main():
     print('---------------WRITING THE FILE------------\n')
     filePtr = open('MySubmissions.csv', 'a+')
     filePtr.write('PERID,Criminal\n')
-    for i in range(X_train.shape[0]):
+    for _ in range(X_train.shape[0]):
         filePtr.write(str(test['PERID'][i]))
         filePtr.write(',')
         filePtr.write(str(predictions[i]))
