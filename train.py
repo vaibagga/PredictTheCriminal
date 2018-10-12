@@ -12,6 +12,7 @@ Spyder Editor
 
 This is a temporary script file.
 """
+no train no fun
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
